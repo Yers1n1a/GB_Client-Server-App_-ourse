@@ -34,5 +34,4 @@ except UnicodeDecodeError:
         for line in file:
             coding = chardet.detect(line)['encoding']
     with open('test_file.txt', encoding=coding) as file:
-        for line in file:
-            print(line.encode('utf-8').decode('utf-8'))
+        print(file.read())
