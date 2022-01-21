@@ -33,9 +33,26 @@ def process_server_answer(message):
     '''
     if RESPONSE in message:
         if message[RESPONSE] == 200:
-            return '200 : OK'
+            return f'200 : OK, {message[ALERT]}'
         return f'400 : {message[ERROR]}'
     raise ValueError
+
+
+def quit_from_server(account_name='Guest'):
+    '''
+    Функция генерирует запрос на вызод с сервера
+    :param account_name:
+    :return:
+    '''
+    # {'action': 'presence', 'time': 1573760672.167031, 'user': {'account_name': 'Guest'}}
+    out = {
+        ACTION: QUIT,
+        TIME: time.time(),
+        USER: {
+            ACCOUNT_NAME: account_name
+        }
+    }
+    return out
 
 
 def main():
@@ -59,6 +76,14 @@ def main():
     transport.connect((server_address, server_port))
     message_to_server = create_presence()
     send_message(transport, message_to_server)
+    try:
+        answer = process_server_answer(get_message(transport))
+        print(answer)
+    except (ValueError, json.JSONDecodeError):
+        print('Не удалось декодировать сообщение сервера.')
+
+    send_message(transport, quit_from_server())
+
     try:
         answer = process_server_answer(get_message(transport))
         print(answer)

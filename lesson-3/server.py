@@ -22,11 +22,37 @@ def process_client_message(message):
                      'USER', USER in message,
                      'USER NAME', message[USER][ACCOUNT_NAME] == 'Guest']
     if all(check_message):
-        return {RESPONSE: 200}
+        return {RESPONSE: 200,
+                ALERT: 'Вы успешно подключились к серверу'}
     else:
         return {
                 RESPONSE: 400,
                 ERROR: f'Bad Request, check {check_message[check_message.index(False)-1]}'
+            }
+
+
+def check_client_quit(message):
+    '''
+    Обработчик сообщений от клиентов, принимает словарь -
+    сообщение от клинта, проверяет корректность,
+    возвращает словарь-ответ для клиента и отключает его
+    от сервера
+
+    :param message:
+    :return:
+    '''
+    check_message = ['ACTION', ACTION in message,
+                     'QUIT', message[ACTION] == QUIT,
+                     'TIME', TIME in message,
+                     'USER', USER in message,
+                     'USER NAME', message[USER][ACCOUNT_NAME] == 'Guest']
+    if all(check_message):
+        return {RESPONSE: 200,
+                ALERT: 'Вы успешно отключены от сервера'}
+    else:
+        return {
+                RESPONSE: 400,
+                ERROR: f'Bad Request, waiting for QUIT'
             }
 
 
@@ -82,6 +108,16 @@ def main():
             print(message_from_cient)
             # {'action': 'presence', 'time': 1573760672.167031, 'user': {'account_name': 'Guest'}}
             response = process_client_message(message_from_cient)
+            send_message(client, response)
+        except (ValueError, json.JSONDecodeError):
+            print('Принято некорретное сообщение от клиента.')
+            client.close()
+
+        try:
+            message_from_cient = get_message(client)
+            print(message_from_cient)
+            # {'action': 'presence', 'time': 1573760672.167031, 'user': {'account_name': 'Guest'}}
+            response = check_client_quit(message_from_cient)
             send_message(client, response)
             client.close()
         except (ValueError, json.JSONDecodeError):
