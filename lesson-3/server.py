@@ -3,9 +3,8 @@
 import socket
 import sys
 import json
-from common.variables import ACTION, ACCOUNT_NAME, RESPONSE, MAX_CONNECTIONS, \
-    PRESENCE, TIME, USER, ERROR, DEFAULT_PORT
-from common.utils import get_message, send_message
+from common.variables import *
+from common.utils import *
 
 
 def process_client_message(message):
@@ -17,13 +16,18 @@ def process_client_message(message):
     :param message:
     :return:
     '''
-    if ACTION in message and message[ACTION] == PRESENCE and TIME in message \
-            and USER in message and message[USER][ACCOUNT_NAME] == 'Guest':
+    check_message = ['ACTION', ACTION in message,
+                     'PRESENCE', message[ACTION] == PRESENCE,
+                     'TIME', TIME in message,
+                     'USER', USER in message,
+                     'USER NAME', message[USER][ACCOUNT_NAME] == 'Guest']
+    if all(check_message):
         return {RESPONSE: 200}
-    return {
-        RESPONSE: 400,
-        ERROR: 'Bad Request'
-    }
+    else:
+        return {
+                RESPONSE: 400,
+                ERROR: f'Bad Request, check {check_message[check_message.index(False)-1]}'
+            }
 
 
 def main():
@@ -39,7 +43,7 @@ def main():
             listen_port = int(sys.argv[sys.argv.index('-p') + 1])
         else:
             listen_port = DEFAULT_PORT
-        if listen_port < 1024 or listen_port > 65535:
+        if 65535 < listen_port < 1024:
             raise ValueError
     except IndexError:
         print('После параметра -\'p\' необходимо указать номер порта.')
