@@ -34,13 +34,13 @@ def process_server_answer(message):
     if RESPONSE in message:
         if message[RESPONSE] == 200:
             return f'200 : OK, {message[ALERT]}'
-        return f'400 : {message[ERROR]}'
+        return f'{message[RESPONSE]} : {message[ERROR]}'
     raise ValueError
 
 
 def quit_from_server(account_name='Guest'):
     '''
-    Функция генерирует запрос на вызод с сервера
+    Функция генерирует запрос на выход с сервера
     :param account_name:
     :return:
     '''
@@ -50,6 +50,25 @@ def quit_from_server(account_name='Guest'):
         TIME: time.time(),
         USER: {
             ACCOUNT_NAME: account_name
+        }
+    }
+    return out
+
+
+def auth(account_name='Guest', password='password'):
+    '''
+    Функция генерирует запрос на аутентификацию клиента
+    :param account_name:
+    :return:
+    '''
+    # {'action': 'presence', 'time': 1573760672.167031, 'user': {'account_name': 'Guest',
+    # 'password': 'password'}}
+    out = {
+        ACTION: AUTHENTICATE,
+        TIME: time.time(),
+        USER: {
+            ACCOUNT_NAME: account_name,
+            PASSWORD: password
         }
     }
     return out
@@ -74,8 +93,15 @@ def main():
 
     transport = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     transport.connect((server_address, server_port))
-    message_to_server = create_presence()
-    send_message(transport, message_to_server)
+
+    send_message(transport, create_presence())
+    try:
+        answer = process_server_answer(get_message(transport))
+        print(answer)
+    except (ValueError, json.JSONDecodeError):
+        print('Не удалось декодировать сообщение сервера.')
+
+    send_message(transport, auth())
     try:
         answer = process_server_answer(get_message(transport))
         print(answer)
@@ -83,7 +109,6 @@ def main():
         print('Не удалось декодировать сообщение сервера.')
 
     send_message(transport, quit_from_server())
-
     try:
         answer = process_server_answer(get_message(transport))
         print(answer)
