@@ -4,9 +4,8 @@ import sys
 import json
 import socket
 import time
-from common.variables import ACTION, PRESENCE, TIME, USER, ACCOUNT_NAME, \
-    RESPONSE, ERROR, DEFAULT_IP_ADDRESS, DEFAULT_PORT
-from common.utils import get_message, send_message
+from common.variables import *
+from common.utils import *
 
 
 def create_presence(account_name='Guest'):
@@ -26,7 +25,7 @@ def create_presence(account_name='Guest'):
     return out
 
 
-def process_ans(message):
+def process_server_answer(message):
     '''
     Функция разбирает ответ сервера
     :param message:
@@ -34,9 +33,45 @@ def process_ans(message):
     '''
     if RESPONSE in message:
         if message[RESPONSE] == 200:
-            return '200 : OK'
-        return f'400 : {message[ERROR]}'
+            return f'200 : OK, {message[ALERT]}'
+        return f'{message[RESPONSE]} : {message[ERROR]}'
     raise ValueError
+
+
+def quit_from_server(account_name='Guest'):
+    '''
+    Функция генерирует запрос на выход с сервера
+    :param account_name:
+    :return:
+    '''
+    # {'action': 'presence', 'time': 1573760672.167031, 'user': {'account_name': 'Guest'}}
+    out = {
+        ACTION: QUIT,
+        TIME: time.time(),
+        USER: {
+            ACCOUNT_NAME: account_name
+        }
+    }
+    return out
+
+
+def auth(account_name='Guest', password='password'):
+    '''
+    Функция генерирует запрос на аутентификацию клиента
+    :param account_name:
+    :return:
+    '''
+    # {'action': 'presence', 'time': 1573760672.167031, 'user': {'account_name': 'Guest',
+    # 'password': 'password'}}
+    out = {
+        ACTION: AUTHENTICATE,
+        TIME: time.time(),
+        USER: {
+            ACCOUNT_NAME: account_name,
+            PASSWORD: password
+        }
+    }
+    return out
 
 
 def main():
@@ -58,10 +93,24 @@ def main():
 
     transport = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     transport.connect((server_address, server_port))
-    message_to_server = create_presence()
-    send_message(transport, message_to_server)
+
+    send_message(transport, create_presence())
     try:
-        answer = process_ans(get_message(transport))
+        answer = process_server_answer(get_message(transport))
+        print(answer)
+    except (ValueError, json.JSONDecodeError):
+        print('Не удалось декодировать сообщение сервера.')
+
+    send_message(transport, auth())
+    try:
+        answer = process_server_answer(get_message(transport))
+        print(answer)
+    except (ValueError, json.JSONDecodeError):
+        print('Не удалось декодировать сообщение сервера.')
+
+    send_message(transport, quit_from_server())
+    try:
+        answer = process_server_answer(get_message(transport))
         print(answer)
     except (ValueError, json.JSONDecodeError):
         print('Не удалось декодировать сообщение сервера.')

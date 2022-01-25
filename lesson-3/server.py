@@ -3,12 +3,11 @@
 import socket
 import sys
 import json
-from common.variables import ACTION, ACCOUNT_NAME, RESPONSE, MAX_CONNECTIONS, \
-    PRESENCE, TIME, USER, ERROR, DEFAULT_PORT
-from common.utils import get_message, send_message
+from common.variables import *
+from common.utils import *
 
 
-def process_client_message(message):
+def check_client_presence(message):
     '''
     Обработчик сообщений от клиентов, принимает словарь -
     сообщение от клинта, проверяет корректность,
@@ -17,13 +16,76 @@ def process_client_message(message):
     :param message:
     :return:
     '''
-    if ACTION in message and message[ACTION] == PRESENCE and TIME in message \
-            and USER in message and message[USER][ACCOUNT_NAME] == 'Guest':
-        return {RESPONSE: 200}
-    return {
-        RESPONSE: 400,
-        ERROR: 'Bad Request'
-    }
+    check_message = ['ACTION', ACTION in message,
+                     'PRESENCE', message[ACTION] == PRESENCE,
+                     'TIME', TIME in message,
+                     'USER', USER in message,
+                     'USER NAME', message[USER][ACCOUNT_NAME] == 'Guest']
+    if all(check_message):
+        return {RESPONSE: 200,
+                ALERT: 'Вы успешно подключились к серверу'}
+    else:
+        return {
+                RESPONSE: 400,
+                ERROR: f'Bad Request, check {check_message[check_message.index(False)-1]}'
+            }
+
+
+def check_client_quit(message):
+    '''
+    Обработчик сообщений от клиентов, принимает словарь -
+    сообщение от клинта, проверяет корректность,
+    возвращает словарь-ответ для клиента и отключает его
+    от сервера
+
+    :param message:
+    :return:
+    '''
+    check_message = ['ACTION', ACTION in message,
+                     'QUIT', message[ACTION] == QUIT,
+                     'TIME', TIME in message,
+                     'USER', USER in message,
+                     'USER NAME', message[USER][ACCOUNT_NAME] == 'Guest']
+    if all(check_message):
+        return {RESPONSE: 200,
+                ALERT: 'Вы успешно отключены от сервера'}
+    else:
+        return {
+                RESPONSE: 400,
+                ERROR: f'Bad Request, waiting for QUIT'
+            }
+
+
+def check_client_auth(message):
+    '''
+    Обработчик сообщений от клиентов, принимает словарь -
+    сообщение от клинта, проверяет корректность,
+    возвращает словарь-ответ для клиента и отключает его
+    от сервера
+
+    :param message:
+    :return:
+    '''
+    check_message = ['ACTION', ACTION in message,
+                     'QUIT', message[ACTION] == AUTHENTICATE,
+                     'TIME', TIME in message,
+                     'USER', USER in message,
+                     'USER NAME', message[USER][ACCOUNT_NAME] == 'Guest',
+                     'PASSWORD', message[USER][PASSWORD] == 'password']
+    if all(check_message):
+        return {RESPONSE: 200,
+                ALERT: 'Вы успешно авторизовались'}
+    else:
+        if check_message.index(False) < 9:
+            return {
+                    RESPONSE: 400,
+                    ERROR: f'Bad Request, check {check_message[check_message.index(False)-1]}'
+            }
+        else:
+            return {
+                    RESPONSE: 402,
+                    ERROR: f'This could be wrong password or no account with that name'
+                }
 
 
 def main():
@@ -39,7 +101,7 @@ def main():
             listen_port = int(sys.argv[sys.argv.index('-p') + 1])
         else:
             listen_port = DEFAULT_PORT
-        if listen_port < 1024 or listen_port > 65535:
+        if 65535 < listen_port < 1024:
             raise ValueError
     except IndexError:
         print('После параметра -\'p\' необходимо указать номер порта.')
@@ -74,10 +136,28 @@ def main():
     while True:
         client, client_address = transport.accept()
         try:
-            message_from_cient = get_message(client)
-            print(message_from_cient)
+            message_from_client = get_message(client)
+            print(message_from_client)
             # {'action': 'presence', 'time': 1573760672.167031, 'user': {'account_name': 'Guest'}}
-            response = process_client_message(message_from_cient)
+            response = check_client_presence(message_from_client)
+            send_message(client, response)
+        except (ValueError, json.JSONDecodeError):
+            print('Принято некорретное сообщение от клиента.')
+            client.close()
+        try:
+            message_from_client = get_message(client)
+            print(message_from_client)
+            # {'action': 'presence', 'time': 1573760672.167031, 'user': {'account_name': 'Guest'}}
+            response = check_client_auth(message_from_client)
+            send_message(client, response)
+        except (ValueError, json.JSONDecodeError):
+            print('Принято некорретное сообщение от клиента.')
+            client.close()
+        try:
+            message_from_client = get_message(client)
+            print(message_from_client)
+            # {'action': 'presence', 'time': 1573760672.167031, 'user': {'account_name': 'Guest'}}
+            response = check_client_quit(message_from_client)
             send_message(client, response)
             client.close()
         except (ValueError, json.JSONDecodeError):
