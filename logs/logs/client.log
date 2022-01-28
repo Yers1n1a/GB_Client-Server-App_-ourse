@@ -1,0 +1,13 @@
+2022-01-28 20:57:30,048 CRITICAL config_client_log.py Критическая ошибка
+2022-01-28 20:57:30,048 ERROR config_client_log.py Ошибка
+2022-01-28 20:57:30,048 INFO config_client_log.py Информационное сообщение
+2022-01-28 21:02:53,918 CRITICAL config_client_log.py Критическая ошибка
+2022-01-28 21:02:53,919 ERROR config_client_log.py Ошибка
+2022-01-28 21:02:53,919 INFO config_client_log.py Информационное сообщение
+2022-01-28 21:09:31,164 ERROR client.py Тестовое сообщение
+2022-01-28 21:09:31,165 INFO client.py Тестовое сообщение
+2022-01-28 21:14:27,694 INFO client.py presence created at 1643393667.6946402
+2022-01-28 22:16:53,086 INFO client.py Used default IP and PORT settings
+2022-01-28 22:16:53,088 INFO client.py presence created at 1643397413.087923
+2022-01-28 22:16:53,088 INFO client.py auth at 1643397413.0887759
+2022-01-28 22:16:53,089 INFO client.py quit from server at 1643397413.089278
