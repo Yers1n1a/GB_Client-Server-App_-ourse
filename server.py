@@ -16,8 +16,17 @@ def check_client_presence(message):
     :param message:
     :return:
     '''
+    try:
+        check = message[ACTION]
+        check = message[USER]
+    except KeyError:
+        return {
+                RESPONSE: 400,
+                ERROR: f'Bad Request, check required fields'
+            }
+
     check_message = ['ACTION', ACTION in message,
-                     'PRESENCE', message[ACTION] == PRESENCE,
+                     'ACTION_TYPE', message[ACTION] == PRESENCE,
                      'TIME', TIME in message,
                      'USER', USER in message,
                      'USER NAME', message[USER][ACCOUNT_NAME] == 'Guest']
@@ -41,8 +50,16 @@ def check_client_quit(message):
     :param message:
     :return:
     '''
+    try:
+        check = message[ACTION]
+        check = message[USER]
+    except KeyError:
+        return {
+                RESPONSE: 400,
+                ERROR: f'Bad Request, check required fields'
+            }
     check_message = ['ACTION', ACTION in message,
-                     'QUIT', message[ACTION] == QUIT,
+                     'ACTION_TYPE', message[ACTION] == QUIT,
                      'TIME', TIME in message,
                      'USER', USER in message,
                      'USER NAME', message[USER][ACCOUNT_NAME] == 'Guest']
@@ -52,7 +69,7 @@ def check_client_quit(message):
     else:
         return {
                 RESPONSE: 400,
-                ERROR: f'Bad Request, waiting for QUIT'
+                ERROR: f'Bad Request, check {check_message[check_message.index(False)-1]}'
             }
 
 
@@ -66,8 +83,16 @@ def check_client_auth(message):
     :param message:
     :return:
     '''
+    try:
+        check = message[ACTION]
+        check = message[USER]
+    except KeyError:
+        return {
+                RESPONSE: 400,
+                ERROR: f'Bad Request, check required fields'
+            }
     check_message = ['ACTION', ACTION in message,
-                     'QUIT', message[ACTION] == AUTHENTICATE,
+                     'ACTION_TYPE', message[ACTION] == AUTHENTICATE,
                      'TIME', TIME in message,
                      'USER', USER in message,
                      'USER NAME', message[USER][ACCOUNT_NAME] == 'Guest',
