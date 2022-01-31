@@ -1,0 +1,7 @@
+2022-01-28 20:58:57,655 CRITICAL config_server_log.py Критическая ошибка
+2022-01-28 20:58:57,655 ERROR config_server_log.py Ошибка
+2022-01-28 20:58:57,656 INFO config_server_log.py Информационное сообщение
+2022-01-28 21:11:20,258 INFO server.py testtesttest
+2022-01-28 21:13:33,003 INFO server.py testtesttest
+2022-01-28 21:14:24,736 INFO server.py testtesttest
+2022-01-28 22:16:50,149 INFO server.py server started at 1643397410.149871

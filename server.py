@@ -5,6 +5,9 @@ import sys
 import json
 from common.variables import *
 from common.utils import *
+import logging
+import logs.config_server_log
+import time
 
 
 def check_client_presence(message):
@@ -121,6 +124,9 @@ def main():
     :return:
     '''
 
+    LOGGER = logging.getLogger('server')
+    LOGGER.info(f'server started at {time.time()}')
+
     try:
         if '-p' in sys.argv:
             listen_port = int(sys.argv[sys.argv.index('-p') + 1])
@@ -129,9 +135,11 @@ def main():
         if 65535 < listen_port < 1024:
             raise ValueError
     except IndexError:
+        LOGGER.critical('Был указан неверный порт при инициализации>')
         print('После параметра -\'p\' необходимо указать номер порта.')
         sys.exit(1)
     except ValueError:
+        LOGGER.critical('Указан порт из неверного диапазона')
         print(
             'В качастве порта может быть указано только число в диапазоне от 1024 до 65535.')
         sys.exit(1)
@@ -145,6 +153,7 @@ def main():
             listen_address = ''
 
     except IndexError:
+        LOGGER.critical('Был указан неверный адрес сервера при инициализации>')
         print(
             'После параметра \'a\'- необходимо указать адрес, который будет слушать сервер.')
         sys.exit(1)
@@ -167,6 +176,7 @@ def main():
             response = check_client_presence(message_from_client)
             send_message(client, response)
         except (ValueError, json.JSONDecodeError):
+            LOGGER.error('Принято некорретное сообщение о присутствии.')
             print('Принято некорретное сообщение от клиента.')
             client.close()
         try:
@@ -176,6 +186,7 @@ def main():
             response = check_client_auth(message_from_client)
             send_message(client, response)
         except (ValueError, json.JSONDecodeError):
+            LOGGER.error('Принято некорретное сообщение о аутентификации.')
             print('Принято некорретное сообщение от клиента.')
             client.close()
         try:
@@ -186,6 +197,7 @@ def main():
             send_message(client, response)
             client.close()
         except (ValueError, json.JSONDecodeError):
+            LOGGER.error('Принято некорретное сообщение о выходе.')
             print('Принято некорретное сообщение от клиента.')
             client.close()
 
