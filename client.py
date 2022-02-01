@@ -8,10 +8,12 @@ from common.variables import *
 from common.utils import *
 import logging
 import logs.config_client_log
+from deco import log
 
 LOGGER = logging.getLogger('client')
 
 
+@log
 def create_presence(account_name='Guest'):
     '''
     Функция генерирует запрос о присутствии клиента
@@ -29,7 +31,7 @@ def create_presence(account_name='Guest'):
     LOGGER.info(f'presence created at {time.time()}')
     return out
 
-
+@log
 def process_server_answer(message):
     '''
     Функция разбирает ответ сервера
@@ -44,6 +46,7 @@ def process_server_answer(message):
     raise ValueError
 
 
+@log
 def quit_from_server(account_name='Guest'):
     '''
     Функция генерирует запрос на выход с сервера
@@ -62,6 +65,7 @@ def quit_from_server(account_name='Guest'):
     return out
 
 
+@log
 def auth(account_name='Guest', password='password'):
     '''
     Функция генерирует запрос на аутентификацию клиента
