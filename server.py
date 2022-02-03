@@ -8,8 +8,10 @@ from common.utils import *
 import logging
 import logs.config_server_log
 import time
+from deco import log
 
 
+@log
 def check_client_presence(message):
     '''
     Обработчик сообщений от клиентов, принимает словарь -
@@ -43,6 +45,7 @@ def check_client_presence(message):
             }
 
 
+@log
 def check_client_quit(message):
     '''
     Обработчик сообщений от клиентов, принимает словарь -
@@ -76,6 +79,7 @@ def check_client_quit(message):
             }
 
 
+@log
 def check_client_auth(message):
     '''
     Обработчик сообщений от клиентов, принимает словарь -

@@ -1,7 +1,20 @@
-2022-01-28 20:58:57,655 CRITICAL config_server_log.py Критическая ошибка
-2022-01-28 20:58:57,655 ERROR config_server_log.py Ошибка
-2022-01-28 20:58:57,656 INFO config_server_log.py Информационное сообщение
-2022-01-28 21:11:20,258 INFO server.py testtesttest
-2022-01-28 21:13:33,003 INFO server.py testtesttest
-2022-01-28 21:14:24,736 INFO server.py testtesttest
-2022-01-28 22:16:50,149 INFO server.py server started at 1643397410.149871
+2022-01-31 23:06:17,969 INFO server.py server started at 1643659577.969064
+2022-01-31 23:08:59,728 INFO server.py server started at 1643659739.728868
+2022-01-31 23:14:25,132 INFO server.py server started at 1643660065.131927
+2022-01-31 23:14:27,750 ERROR server.py Принято некорретное сообщение о присутствии.
+2022-01-31 23:16:34,601 INFO server.py server started at 1643660194.601137
+2022-02-01 21:54:48,631 INFO server.py server started at 1643741688.630422
+2022-02-01 21:56:36,442 INFO server.py server started at 1643741796.442461
+2022-02-01 22:01:48,923 INFO server.py server started at 1643742108.923012
+2022-02-01 22:03:16,701 INFO server.py server started at 1643742196.7012181
+2022-02-01 22:06:31,274 INFO server.py server started at 1643742391.274741
+2022-02-01 22:09:39,316 INFO server.py server started at 1643742579.3165
+2022-02-01 22:10:09,898 INFO server.py server started at 1643742609.898916
+2022-02-01 22:10:23,909 INFO server.py server started at 1643742623.9095
+2022-02-01 22:11:31,217 INFO server.py server started at 1643742691.217943
+2022-02-01 22:11:38,478 INFO deco.py Функция check_client_presence вызвана из функции main().
+2022-02-01 22:11:38,479 INFO deco.py Функция check_client_quit вызвана из функции main().
+2022-02-01 22:12:55,906 INFO server.py server started at 1643742775.906095
+2022-02-01 22:12:59,397 INFO deco.py Функция check_client_presence вызвана из функции main().
+2022-02-01 22:12:59,398 INFO deco.py Функция check_client_auth вызвана из функции main().
+2022-02-01 22:12:59,399 INFO deco.py Функция check_client_quit вызвана из функции main().

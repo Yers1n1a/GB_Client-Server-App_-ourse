@@ -11,3 +11,88 @@
 2022-01-28 22:16:53,088 INFO client.py presence created at 1643397413.087923
 2022-01-28 22:16:53,088 INFO client.py auth at 1643397413.0887759
 2022-01-28 22:16:53,089 INFO client.py quit from server at 1643397413.089278
+2022-01-31 23:14:27,747 INFO client.py Used default IP and PORT settings
+2022-01-31 23:16:37,479 INFO client.py Used default IP and PORT settings
+2022-01-31 23:16:37,480 INFO client.py from wrapper at 1643660197.4803278
+2022-01-31 23:16:37,480 INFO client.py presence created at 1643660197.480481
+2022-01-31 23:16:37,480 INFO client.py auth at 1643660197.48095
+2022-01-31 23:16:37,481 INFO client.py quit from server at 1643660197.4812238
+2022-02-01 21:53:29,697 INFO client.py Used default IP and PORT settings
+2022-02-01 22:01:52,690 INFO client.py Used default IP and PORT settings
+2022-02-01 22:01:52,706 INFO deco.py Была вызвана функция create_presence Вызов из функции main().Вызов из функции main
+2022-02-01 22:01:52,706 INFO client.py presence created at 1643742112.706657
+2022-02-01 22:01:52,708 INFO deco.py Была вызвана функция process_server_answer Вызов из функции main().Вызов из функции main
+2022-02-01 22:01:52,708 INFO client.py auth at 1643742112.708214
+2022-02-01 22:01:52,708 INFO deco.py Была вызвана функция process_server_answer Вызов из функции main().Вызов из функции main
+2022-02-01 22:01:52,708 INFO client.py quit from server at 1643742112.708949
+2022-02-01 22:01:52,709 INFO deco.py Была вызвана функция process_server_answer Вызов из функции main().Вызов из функции main
+2022-02-01 22:03:19,483 INFO client.py Used default IP and PORT settings
+2022-02-01 22:03:19,509 INFO deco.py Была вызвана функция create_presence Вызов из функции main().Вызов из функции 110
+2022-02-01 22:03:19,510 INFO client.py presence created at 1643742199.510062
+2022-02-01 22:03:19,512 INFO deco.py Была вызвана функция process_server_answer Вызов из функции main().Вызов из функции 112
+2022-02-01 22:03:19,512 INFO client.py auth at 1643742199.512386
+2022-02-01 22:03:19,514 INFO deco.py Была вызвана функция process_server_answer Вызов из функции main().Вызов из функции 120
+2022-02-01 22:03:19,514 INFO client.py quit from server at 1643742199.514733
+2022-02-01 22:03:19,516 INFO deco.py Была вызвана функция process_server_answer Вызов из функции main().Вызов из функции 128
+2022-02-01 22:03:47,274 INFO client.py Used default IP and PORT settings
+2022-02-01 22:03:47,293 INFO deco.py Была вызвана функция create_presence Вызов из функции ['File', '"/Users/user/Documents/Python/GB_Client-Server-App_Git/GB_Client-Server-App_Course/client.py",', 'line', '136,', 'in', '<module>', 'main()'].Вызов из функции 110
+2022-02-01 22:03:47,293 INFO client.py presence created at 1643742227.293462
+2022-02-01 22:03:47,294 INFO deco.py Была вызвана функция process_server_answer Вызов из функции ['File', '"/Users/user/Documents/Python/GB_Client-Server-App_Git/GB_Client-Server-App_Course/client.py",', 'line', '136,', 'in', '<module>', 'main()'].Вызов из функции 112
+2022-02-01 22:03:47,294 INFO client.py auth at 1643742227.294338
+2022-02-01 22:03:47,294 INFO deco.py Была вызвана функция process_server_answer Вызов из функции ['File', '"/Users/user/Documents/Python/GB_Client-Server-App_Git/GB_Client-Server-App_Course/client.py",', 'line', '136,', 'in', '<module>', 'main()'].Вызов из функции 120
+2022-02-01 22:03:47,295 INFO client.py quit from server at 1643742227.2949991
+2022-02-01 22:03:47,295 INFO deco.py Была вызвана функция process_server_answer Вызов из функции ['File', '"/Users/user/Documents/Python/GB_Client-Server-App_Git/GB_Client-Server-App_Course/client.py",', 'line', '136,', 'in', '<module>', 'main()'].Вызов из функции 128
+2022-02-01 22:04:58,473 INFO client.py Used default IP and PORT settings
+2022-02-01 22:04:58,477 INFO deco.py Функция create_presence вызвана из функции File.
+2022-02-01 22:04:58,477 INFO client.py presence created at 1643742298.477893
+2022-02-01 22:04:58,479 INFO deco.py Функция process_server_answer вызвана из функции File.
+2022-02-01 22:04:58,479 INFO client.py auth at 1643742298.4796228
+2022-02-01 22:04:58,480 INFO deco.py Функция process_server_answer вызвана из функции File.
+2022-02-01 22:04:58,480 INFO client.py quit from server at 1643742298.4805381
+2022-02-01 22:04:58,481 INFO deco.py Функция process_server_answer вызвана из функции File.
+2022-02-01 22:05:17,314 INFO client.py Used default IP and PORT settings
+2022-02-01 22:05:17,316 INFO deco.py Функция create_presence вызвана из функции main().
+2022-02-01 22:05:17,317 INFO client.py presence created at 1643742317.316992
+2022-02-01 22:05:17,317 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-01 22:05:17,317 INFO client.py auth at 1643742317.317906
+2022-02-01 22:05:17,318 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-01 22:05:17,318 INFO client.py quit from server at 1643742317.3187468
+2022-02-01 22:05:17,319 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-01 22:06:36,723 INFO client.py Used default IP and PORT settings
+2022-02-01 22:06:36,725 INFO deco.py Функция create_presence вызвана из функции main().
+2022-02-01 22:06:36,725 INFO client.py presence created at 1643742396.72513
+2022-02-01 22:06:36,726 INFO deco.py Функция check_client_presence вызвана из функции main().
+2022-02-01 22:06:36,726 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-01 22:06:36,726 INFO client.py auth at 1643742396.7269812
+2022-02-01 22:06:36,727 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-01 22:06:36,727 INFO client.py quit from server at 1643742396.727394
+2022-02-01 22:06:36,727 INFO deco.py Функция check_client_quit вызвана из функции main().
+2022-02-01 22:06:36,727 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-01 22:07:55,266 INFO client.py Used default IP and PORT settings
+2022-02-01 22:07:55,269 INFO deco.py Функция create_presence вызвана из функции main().
+2022-02-01 22:07:55,269 INFO client.py presence created at 1643742475.269309
+2022-02-01 22:07:55,270 INFO deco.py Функция check_client_presence вызвана из функции main().
+2022-02-01 22:07:55,270 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-01 22:07:55,270 INFO client.py auth at 1643742475.2709172
+2022-02-01 22:07:55,271 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-01 22:07:55,271 INFO client.py quit from server at 1643742475.271498
+2022-02-01 22:07:55,271 INFO deco.py Функция check_client_quit вызвана из функции main().
+2022-02-01 22:07:55,272 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-01 22:11:38,475 INFO client.py Used default IP and PORT settings
+2022-02-01 22:11:38,477 INFO deco.py Функция create_presence вызвана из функции main().
+2022-02-01 22:11:38,477 INFO client.py presence created at 1643742698.47731
+2022-02-01 22:11:38,479 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-01 22:11:38,479 INFO client.py auth at 1643742698.479126
+2022-02-01 22:11:38,479 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-01 22:11:38,479 INFO client.py quit from server at 1643742698.479539
+2022-02-01 22:11:38,480 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-01 22:12:59,392 INFO client.py Used default IP and PORT settings
+2022-02-01 22:12:59,395 INFO deco.py Функция create_presence вызвана из функции main().
+2022-02-01 22:12:59,395 INFO client.py presence created at 1643742779.395236
+2022-02-01 22:12:59,397 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-01 22:12:59,397 INFO deco.py Функция auth вызвана из функции main().
+2022-02-01 22:12:59,397 INFO client.py auth at 1643742779.397951
+2022-02-01 22:12:59,398 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-01 22:12:59,399 INFO deco.py Функция quit_from_server вызвана из функции main().
+2022-02-01 22:12:59,399 INFO client.py quit from server at 1643742779.3993049
+2022-02-01 22:12:59,400 INFO deco.py Функция process_server_answer вызвана из функции main().
