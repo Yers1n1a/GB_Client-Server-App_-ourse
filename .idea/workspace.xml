@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f18fa977-9a19-4988-a5da-ca209d04339a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client_class.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/errors.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/logs/server.log.2022-02-04" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client_echo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/launcher.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_echo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_echo_2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/client_class.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/variables.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/variables.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/logs/client.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/logs/client.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/logs/server.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/logs/server.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +53,7 @@
       <recent name="$PROJECT_DIR$/lesson-2" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.client_class">
+  <component name="RunManager" selected="Python.launcher">
     <configuration name="client_class" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="lesson-3" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -95,7 +96,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="client_echo_several" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="launcher" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="lesson-3" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -107,7 +108,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/client_echo_several.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/launcher.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -181,11 +182,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.client_class" />
-        <item itemvalue="Python.server" />
+        <item itemvalue="Python.launcher" />
         <item itemvalue="Python.client_echo" />
         <item itemvalue="Python.server_echo" />
-        <item itemvalue="Python.client_echo_several" />
+        <item itemvalue="Python.client_class" />
+        <item itemvalue="Python.server" />
       </list>
     </recent_temporary>
   </component>

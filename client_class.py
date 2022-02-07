@@ -101,7 +101,7 @@ class Client(object):
             },
             TO: 'chat',
             FROM: self.account_name,
-            MESSAGE: message
+            MESSAGE_TEXT: message
         }
         self.send_and_listen(out)
 

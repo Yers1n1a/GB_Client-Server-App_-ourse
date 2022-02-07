@@ -32,5 +32,5 @@ QUIT = 'quit'
 ALERT = 'alert'
 AUTHENTICATE = 'authenticate'
 MSG = 'send message to chat or user'
-MESSAGE = 'Message: '
+MESSAGE_TEXT = 'Message: '
 
