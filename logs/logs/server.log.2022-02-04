@@ -1,0 +1,115 @@
+2022-01-31 23:06:17,969 INFO server.py server started at 1643659577.969064
+2022-01-31 23:08:59,728 INFO server.py server started at 1643659739.728868
+2022-01-31 23:14:25,132 INFO server.py server started at 1643660065.131927
+2022-01-31 23:14:27,750 ERROR server.py Принято некорретное сообщение о присутствии.
+2022-01-31 23:16:34,601 INFO server.py server started at 1643660194.601137
+2022-02-01 21:54:48,631 INFO server.py server started at 1643741688.630422
+2022-02-01 21:56:36,442 INFO server.py server started at 1643741796.442461
+2022-02-01 22:01:48,923 INFO server.py server started at 1643742108.923012
+2022-02-01 22:03:16,701 INFO server.py server started at 1643742196.7012181
+2022-02-01 22:06:31,274 INFO server.py server started at 1643742391.274741
+2022-02-01 22:09:39,316 INFO server.py server started at 1643742579.3165
+2022-02-01 22:10:09,898 INFO server.py server started at 1643742609.898916
+2022-02-01 22:10:23,909 INFO server.py server started at 1643742623.9095
+2022-02-01 22:11:31,217 INFO server.py server started at 1643742691.217943
+2022-02-01 22:11:38,478 INFO deco.py Функция check_client_presence вызвана из функции main().
+2022-02-01 22:11:38,479 INFO deco.py Функция check_client_quit вызвана из функции main().
+2022-02-01 22:12:55,906 INFO server.py server started at 1643742775.906095
+2022-02-01 22:12:59,397 INFO deco.py Функция check_client_presence вызвана из функции main().
+2022-02-01 22:12:59,398 INFO deco.py Функция check_client_auth вызвана из функции main().
+2022-02-01 22:12:59,399 INFO deco.py Функция check_client_quit вызвана из функции main().
+2022-02-03 21:20:12,179 INFO server.py server started at 1643912412.179175
+2022-02-03 21:20:22,277 ERROR server.py Принято некорретное сообщение о присутствии.
+2022-02-03 21:21:01,038 INFO server.py server started at 1643912461.038632
+2022-02-03 21:21:05,604 INFO deco.py Функция check_client_presence вызвана из функции main().
+2022-02-03 21:24:48,108 INFO server.py server started at 1643912688.108334
+2022-02-03 21:24:55,614 INFO deco.py Функция check_client_presence вызвана из функции main().
+2022-02-03 21:24:55,619 ERROR server.py Принято некорретное сообщение о аутентификации.
+2022-02-03 21:27:43,722 INFO server.py server started at 1643912863.722489
+2022-02-03 21:29:26,611 INFO server.py server started at 1643912966.611063
+2022-02-03 21:29:29,879 INFO deco.py Функция check_client_auth вызвана из функции main().
+2022-02-03 21:30:09,574 INFO server.py server started at 1643913009.57482
+2022-02-03 21:30:12,801 INFO deco.py Функция check_client_auth вызвана из функции main().
+2022-02-03 21:34:09,065 INFO server.py server started at 1643913249.0654001
+2022-02-03 21:35:28,292 INFO server.py server started at 1643913328.2921112
+2022-02-03 21:35:43,107 INFO deco.py Функция check_client_auth вызвана из функции main().
+2022-02-03 21:35:48,943 INFO deco.py Функция check_client_auth вызвана из функции main().
+2022-02-03 21:38:14,830 INFO server.py server started at 1643913494.830133
+2022-02-03 21:38:22,429 INFO deco.py Функция check_client_auth вызвана из функции main().
+2022-02-03 21:41:30,873 INFO server.py server started at 1643913690.8734112
+2022-02-03 21:41:41,711 ERROR server.py Принято некорретное сообщение о аутентификации.
+2022-02-03 21:45:11,607 INFO server.py server started at 1643913911.607738
+2022-02-03 21:45:15,339 INFO deco.py Функция check_client_auth вызвана из функции main().
+2022-02-03 21:45:28,687 INFO deco.py Функция check_client_auth вызвана из функции main().
+2022-02-03 21:45:45,342 INFO deco.py Функция check_client_auth вызвана из функции main().
+2022-02-03 21:59:32,872 INFO server.py server started at 1643914772.872344
+2022-02-03 22:02:06,548 INFO server.py server started at 1643914926.548692
+2022-02-03 22:02:10,508 INFO deco.py Функция check_client_auth вызвана из функции main().
+2022-02-03 22:02:32,615 INFO deco.py Функция check_client_auth вызвана из функции main().
+2022-02-03 22:02:55,408 INFO deco.py Функция check_client_auth вызвана из функции main().
+2022-02-03 22:09:35,089 INFO deco.py Функция check_client_auth вызвана из функции main().
+2022-02-03 22:14:44,303 INFO deco.py Функция check_client_auth вызвана из функции main().
+2022-02-03 22:15:15,515 INFO deco.py Функция check_client_auth вызвана из функции main().
+2022-02-03 22:15:15,516 INFO deco.py Функция check_client_auth вызвана из функции main().
+2022-02-03 23:38:04,674 INFO server.py server started at 1643920684.673856
+2022-02-03 23:38:07,821 ERROR server.py Принято некорретное сообщение о присутствии.
+2022-02-03 23:38:48,256 INFO server.py server started at 1643920728.256585
+2022-02-03 23:38:51,325 INFO deco.py Функция check_client_presence вызвана из функции main().
+2022-02-03 23:38:51,325 INFO deco.py Функция check_client_auth вызвана из функции main().
+2022-02-03 23:42:32,377 INFO server.py server started at 1643920952.3771222
+2022-02-03 23:42:34,911 INFO deco.py Функция check_client_presence вызвана из функции main().
+2022-02-03 23:42:34,912 INFO deco.py Функция check_client_auth вызвана из функции main().
+2022-02-03 23:42:34,912 INFO deco.py Функция check_client_quit вызвана из функции main().
+2022-02-03 23:45:06,616 INFO server.py server started at 1643921106.6160629
+2022-02-03 23:45:09,703 INFO deco.py Функция check_client_presence вызвана из функции main().
+2022-02-03 23:45:09,704 INFO deco.py Функция check_client_auth вызвана из функции main().
+2022-02-03 23:45:09,704 INFO deco.py Функция check_client_quit вызвана из функции main().
+2022-02-04 08:55:45,812 INFO server.py server started at 1643954145.812374
+2022-02-04 08:55:50,483 INFO deco.py Функция check_client_presence вызвана из функции main().
+2022-02-04 08:55:50,484 INFO deco.py Функция check_client_auth вызвана из функции main().
+2022-02-04 08:55:50,485 INFO deco.py Функция check_client_quit вызвана из функции main().
+2022-02-04 08:59:59,029 INFO server.py server started at 1643954399.029162
+2022-02-04 09:00:02,140 INFO deco.py Функция check_client_presence вызвана из функции main().
+2022-02-04 09:00:02,141 INFO deco.py Функция check_client_auth вызвана из функции main().
+2022-02-04 09:00:02,142 INFO deco.py Функция check_client_message вызвана из функции main().
+2022-02-04 09:02:32,459 INFO server.py server started at 1643954552.459936
+2022-02-04 09:02:35,978 INFO deco.py Функция check_client_presence вызвана из функции main().
+2022-02-04 09:02:35,979 INFO deco.py Функция check_client_auth вызвана из функции main().
+2022-02-04 09:02:35,980 INFO deco.py Функция check_client_message вызвана из функции main().
+2022-02-04 09:09:06,739 INFO server.py server started at 1643954946.73979
+2022-02-04 09:09:09,923 INFO deco.py Функция check_client_presence вызвана из функции main().
+2022-02-04 09:09:09,924 INFO deco.py Функция check_client_auth вызвана из функции main().
+2022-02-04 09:09:09,925 INFO deco.py Функция check_client_message вызвана из функции main().
+2022-02-04 09:09:40,143 INFO server.py server started at 1643954980.143584
+2022-02-04 09:09:43,331 INFO deco.py Функция check_client_presence вызвана из функции main().
+2022-02-04 09:09:43,331 INFO deco.py Функция check_client_auth вызвана из функции main().
+2022-02-04 09:09:43,332 INFO deco.py Функция check_client_message вызвана из функции main().
+2022-02-04 09:11:35,377 INFO server.py server started at 1643955095.377367
+2022-02-04 09:11:40,102 INFO deco.py Функция check_client_presence вызвана из функции main().
+2022-02-04 09:11:40,103 INFO deco.py Функция check_client_auth вызвана из функции main().
+2022-02-04 09:11:40,103 INFO deco.py Функция check_client_message вызвана из функции main().
+2022-02-04 09:13:35,943 INFO server.py server started at 1643955215.943543
+2022-02-04 09:13:40,294 INFO deco.py Функция check_client_presence вызвана из функции main().
+2022-02-04 09:13:40,295 INFO deco.py Функция check_client_auth вызвана из функции main().
+2022-02-04 09:14:35,262 INFO server.py server started at 1643955275.262938
+2022-02-04 09:14:38,361 INFO deco.py Функция check_client_presence вызвана из функции main().
+2022-02-04 09:14:38,363 INFO deco.py Функция check_client_auth вызвана из функции main().
+2022-02-04 09:14:38,363 INFO deco.py Функция check_client_message вызвана из функции main().
+2022-02-04 09:18:50,161 INFO server.py server started at 1643955530.161768
+2022-02-04 09:18:52,446 INFO deco.py Функция check_client_presence вызвана из функции main().
+2022-02-04 09:18:52,447 INFO deco.py Функция check_client_auth вызвана из функции main().
+2022-02-04 09:18:52,448 INFO deco.py Функция check_client_message вызвана из функции main().
+2022-02-04 09:21:11,137 INFO server.py server started at 1643955671.137825
+2022-02-04 09:21:13,971 INFO deco.py Функция check_client_presence вызвана из функции main().
+2022-02-04 09:21:13,973 INFO deco.py Функция check_client_auth вызвана из функции main().
+2022-02-04 09:21:13,974 INFO deco.py Функция check_client_message вызвана из функции main().
+2022-02-04 09:22:06,079 INFO server.py server started at 1643955726.078971
+2022-02-04 09:22:09,698 INFO deco.py Функция check_client_presence вызвана из функции main().
+2022-02-04 09:22:09,700 INFO deco.py Функция check_client_auth вызвана из функции main().
+2022-02-04 09:22:09,700 INFO deco.py Функция check_client_message вызвана из функции main().
+2022-02-04 09:22:09,702 INFO deco.py Функция check_client_quit вызвана из функции main().
+2022-02-04 09:22:47,298 INFO server.py server started at 1643955767.298379
+2022-02-04 09:22:50,583 INFO deco.py Функция check_client_presence вызвана из функции main().
+2022-02-04 09:22:50,584 INFO deco.py Функция check_client_auth вызвана из функции main().
+2022-02-04 09:22:50,584 INFO deco.py Функция check_client_message вызвана из функции main().
+2022-02-04 09:22:50,585 INFO deco.py Функция check_client_quit вызвана из функции main().
