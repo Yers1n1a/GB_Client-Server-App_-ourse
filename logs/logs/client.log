@@ -96,3 +96,233 @@
 2022-02-01 22:12:59,399 INFO deco.py Функция quit_from_server вызвана из функции main().
 2022-02-01 22:12:59,399 INFO client.py quit from server at 1643742779.3993049
 2022-02-01 22:12:59,400 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-03 23:38:07,820 INFO deco.py Функция presence вызвана из функции main().
+2022-02-03 23:38:07,821 INFO client_class.py presence created at 1643920687.821352
+2022-02-03 23:38:51,323 INFO deco.py Функция presence вызвана из функции main().
+2022-02-03 23:42:34,909 INFO deco.py Функция presence вызвана из функции main().
+2022-02-03 23:42:34,912 INFO client_class.py quit from server at 1643920954.912514
+2022-02-03 23:45:09,701 INFO deco.py Функция presence вызвана из функции main().
+2022-02-03 23:45:09,704 INFO client_class.py quit from server at 1643921109.704395
+2022-02-04 08:55:50,480 INFO deco.py Функция presence вызвана из функции main().
+2022-02-04 08:55:50,483 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-04 08:55:50,484 INFO deco.py Функция auth вызвана из функции main().
+2022-02-04 08:55:50,484 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-04 08:55:50,484 INFO client_class.py quit from server at 1643954150.484981
+2022-02-04 08:55:50,489 INFO deco.py Функция quit вызвана из функции main().
+2022-02-04 08:55:50,489 INFO client_class.py quit from server at 1643954150.489395
+2022-02-04 09:00:02,138 INFO deco.py Функция presence вызвана из функции main().
+2022-02-04 09:00:02,140 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-04 09:00:02,141 INFO deco.py Функция auth вызвана из функции main().
+2022-02-04 09:00:02,141 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-04 09:00:02,141 INFO client_class.py quit from server at 1643954402.141979
+2022-02-04 09:00:02,147 INFO deco.py Функция quit вызвана из функции main().
+2022-02-04 09:00:02,147 INFO client_class.py quit from server at 1643954402.1471949
+2022-02-04 09:02:35,976 INFO deco.py Функция presence вызвана из функции main().
+2022-02-04 09:02:35,979 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-04 09:02:35,979 INFO deco.py Функция auth вызвана из функции main().
+2022-02-04 09:02:35,980 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-04 09:02:35,983 INFO deco.py Функция quit вызвана из функции main().
+2022-02-04 09:02:35,983 INFO client_class.py quit from server at 1643954555.983698
+2022-02-04 09:09:09,921 INFO deco.py Функция presence вызвана из функции main().
+2022-02-04 09:09:09,924 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-04 09:09:09,924 INFO deco.py Функция auth вызвана из функции main().
+2022-02-04 09:09:09,925 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-04 09:09:09,925 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-04 09:09:09,925 INFO deco.py Функция quit вызвана из функции main().
+2022-02-04 09:09:09,925 INFO client_class.py quit from server at 1643954949.925905
+2022-02-04 09:09:43,329 INFO deco.py Функция presence вызвана из функции main().
+2022-02-04 09:09:43,331 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-04 09:09:43,331 INFO deco.py Функция auth вызвана из функции main().
+2022-02-04 09:09:43,332 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-04 09:09:43,332 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-04 09:09:43,332 INFO deco.py Функция quit вызвана из функции main().
+2022-02-04 09:09:43,333 INFO client_class.py quit from server at 1643954983.3330188
+2022-02-04 09:11:40,100 INFO deco.py Функция presence вызвана из функции main().
+2022-02-04 09:11:40,102 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-04 09:11:40,103 INFO deco.py Функция auth вызвана из функции main().
+2022-02-04 09:11:40,103 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-04 09:11:40,104 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-04 09:11:40,104 INFO deco.py Функция quit вызвана из функции main().
+2022-02-04 09:11:40,104 INFO client_class.py quit from server at 1643955100.104479
+2022-02-04 09:13:40,291 INFO deco.py Функция presence вызвана из функции main().
+2022-02-04 09:13:40,294 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-04 09:13:40,294 INFO deco.py Функция auth вызвана из функции main().
+2022-02-04 09:13:40,295 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-04 09:13:40,300 INFO deco.py Функция quit вызвана из функции main().
+2022-02-04 09:13:40,301 INFO client_class.py quit from server at 1643955220.300993
+2022-02-04 09:14:38,359 INFO deco.py Функция presence вызвана из функции main().
+2022-02-04 09:14:38,362 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-04 09:14:38,362 INFO deco.py Функция auth вызвана из функции main().
+2022-02-04 09:14:38,363 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-04 09:14:38,364 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-04 09:14:38,364 INFO deco.py Функция quit вызвана из функции main().
+2022-02-04 09:14:38,364 INFO client_class.py quit from server at 1643955278.364405
+2022-02-04 09:18:52,444 INFO deco.py Функция presence вызвана из функции main().
+2022-02-04 09:18:52,447 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-04 09:18:52,447 INFO deco.py Функция auth вызвана из функции main().
+2022-02-04 09:18:52,447 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-04 09:18:52,448 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-04 09:18:52,448 INFO deco.py Функция quit вызвана из функции main().
+2022-02-04 09:18:52,448 INFO client_class.py quit from server at 1643955532.4486332
+2022-02-04 09:21:13,969 INFO deco.py Функция presence вызвана из функции main().
+2022-02-04 09:21:13,972 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-04 09:21:13,973 INFO deco.py Функция auth вызвана из функции main().
+2022-02-04 09:21:13,974 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-04 09:21:13,975 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-04 09:22:09,696 INFO deco.py Функция presence вызвана из функции main().
+2022-02-04 09:22:09,699 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-04 09:22:09,699 INFO deco.py Функция auth вызвана из функции main().
+2022-02-04 09:22:09,700 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-04 09:22:09,701 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-04 09:22:09,702 INFO deco.py Функция quit вызвана из функции main().
+2022-02-04 09:22:09,702 INFO client_class.py quit from server at 1643955729.7024052
+2022-02-04 09:22:09,703 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-04 09:22:50,581 INFO deco.py Функция presence вызвана из функции main().
+2022-02-04 09:22:50,583 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-04 09:22:50,584 INFO deco.py Функция auth вызвана из функции main().
+2022-02-04 09:22:50,584 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-04 09:22:50,585 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-04 09:22:50,585 INFO deco.py Функция quit вызвана из функции main().
+2022-02-04 09:22:50,585 INFO client_class.py quit from server at 1643955770.5854
+2022-02-04 09:22:50,585 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 15:56:48,771 INFO deco.py Функция presence вызвана из функции main().
+2022-02-06 15:56:48,773 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 15:56:48,774 INFO deco.py Функция auth вызвана из функции main().
+2022-02-06 15:56:48,774 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 15:57:01,701 INFO deco.py Функция quit вызвана из функции main().
+2022-02-06 15:57:01,702 INFO client_class.py quit from server at 1644152221.702123
+2022-02-06 15:59:02,451 INFO deco.py Функция presence вызвана из функции main().
+2022-02-06 15:59:02,453 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 15:59:02,454 INFO deco.py Функция auth вызвана из функции main().
+2022-02-06 15:59:02,455 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 15:59:23,097 INFO deco.py Функция quit вызвана из функции main().
+2022-02-06 15:59:23,097 INFO client_class.py quit from server at 1644152363.097269
+2022-02-06 16:01:57,989 INFO deco.py Функция presence вызвана из функции main().
+2022-02-06 16:01:57,999 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 16:01:57,999 INFO deco.py Функция auth вызвана из функции main().
+2022-02-06 16:01:58,001 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 16:02:44,307 INFO deco.py Функция presence вызвана из функции main().
+2022-02-06 16:03:07,320 INFO deco.py Функция presence вызвана из функции main().
+2022-02-06 16:03:07,323 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 16:03:07,323 INFO deco.py Функция auth вызвана из функции main().
+2022-02-06 16:03:07,323 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 16:04:03,096 INFO deco.py Функция quit вызвана из функции main().
+2022-02-06 16:04:03,096 INFO client_class.py quit from server at 1644152643.0968168
+2022-02-06 16:05:10,920 INFO deco.py Функция presence вызвана из функции main().
+2022-02-06 16:05:10,922 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 16:05:10,922 INFO deco.py Функция auth вызвана из функции main().
+2022-02-06 16:05:10,923 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 16:06:29,675 INFO deco.py Функция quit вызвана из функции main().
+2022-02-06 16:06:29,675 INFO client_class.py quit from server at 1644152789.675678
+2022-02-06 16:06:34,850 INFO deco.py Функция presence вызвана из функции main().
+2022-02-06 16:06:34,853 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 16:06:34,853 INFO deco.py Функция auth вызвана из функции main().
+2022-02-06 16:06:34,854 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 16:07:00,089 INFO deco.py Функция quit вызвана из функции main().
+2022-02-06 16:07:00,089 INFO client_class.py quit from server at 1644152820.08963
+2022-02-06 16:07:07,289 INFO deco.py Функция presence вызвана из функции main().
+2022-02-06 16:07:07,292 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 16:07:07,293 INFO deco.py Функция auth вызвана из функции main().
+2022-02-06 16:07:07,293 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 16:07:26,244 INFO deco.py Функция quit вызвана из функции main().
+2022-02-06 16:07:26,244 INFO client_class.py quit from server at 1644152846.244147
+2022-02-06 16:08:41,376 INFO deco.py Функция presence вызвана из функции main().
+2022-02-06 16:08:41,378 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 16:08:41,378 INFO deco.py Функция auth вызвана из функции main().
+2022-02-06 16:08:41,379 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 16:08:41,379 INFO deco.py Функция quit вызвана из функции main().
+2022-02-06 16:08:41,379 INFO client_class.py quit from server at 1644152921.37924
+2022-02-06 16:09:47,042 INFO deco.py Функция presence вызвана из функции main().
+2022-02-06 16:09:47,045 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 16:09:47,046 INFO deco.py Функция auth вызвана из функции main().
+2022-02-06 16:09:47,046 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 16:09:47,047 INFO deco.py Функция quit вызвана из функции main().
+2022-02-06 16:09:47,047 INFO client_class.py quit from server at 1644152987.0472572
+2022-02-06 16:10:57,551 INFO deco.py Функция presence вызвана из функции main().
+2022-02-06 16:10:57,554 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 16:10:57,554 INFO deco.py Функция auth вызвана из функции main().
+2022-02-06 16:10:57,555 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 16:10:57,555 INFO deco.py Функция quit вызвана из функции main().
+2022-02-06 16:10:57,555 INFO client_class.py quit from server at 1644153057.5552928
+2022-02-06 16:10:57,556 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 16:11:39,151 INFO deco.py Функция presence вызвана из функции main().
+2022-02-06 16:11:39,153 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 16:11:39,153 INFO deco.py Функция auth вызвана из функции main().
+2022-02-06 16:11:39,154 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 16:12:35,497 INFO deco.py Функция quit вызвана из функции main().
+2022-02-06 16:12:35,497 INFO client_class.py quit from server at 1644153155.497524
+2022-02-06 16:12:43,517 INFO deco.py Функция presence вызвана из функции main().
+2022-02-06 16:12:43,520 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 16:12:43,520 INFO deco.py Функция auth вызвана из функции main().
+2022-02-06 16:12:43,521 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 16:12:43,522 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 16:12:43,522 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 16:12:43,522 INFO deco.py Функция quit вызвана из функции main().
+2022-02-06 16:12:43,523 INFO client_class.py quit from server at 1644153163.523071
+2022-02-06 16:12:43,524 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 16:14:50,633 INFO deco.py Функция presence вызвана из функции main().
+2022-02-06 16:14:50,635 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 16:14:50,635 INFO deco.py Функция auth вызвана из функции main().
+2022-02-06 16:14:50,636 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 16:14:50,636 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 16:14:50,637 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 16:14:50,638 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 16:14:50,638 INFO deco.py Функция quit вызвана из функции main().
+2022-02-06 16:14:50,638 INFO client_class.py quit from server at 1644153290.6388118
+2022-02-06 16:14:50,639 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 16:27:40,759 INFO deco.py Функция presence вызвана из функции main().
+2022-02-06 16:27:40,761 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 16:27:40,761 INFO deco.py Функция auth вызвана из функции main().
+2022-02-06 16:27:40,762 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 16:30:51,168 INFO deco.py Функция presence вызвана из функции main().
+2022-02-06 16:30:51,170 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 16:30:51,170 INFO deco.py Функция auth вызвана из функции main().
+2022-02-06 16:30:51,171 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 16:30:56,964 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 16:30:59,246 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 16:31:00,867 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 16:31:03,165 INFO deco.py Функция quit вызвана из функции main().
+2022-02-06 16:31:03,165 INFO client_class.py quit from server at 1644154263.1659
+2022-02-06 16:31:03,166 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 16:32:13,788 INFO deco.py Функция presence вызвана из функции main().
+2022-02-06 16:32:13,790 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 16:32:13,790 INFO deco.py Функция auth вызвана из функции main().
+2022-02-06 16:32:13,791 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 16:32:16,849 INFO deco.py Функция quit вызвана из функции main().
+2022-02-06 16:32:16,850 INFO client_class.py quit from server at 1644154336.8500962
+2022-02-06 16:32:16,850 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-06 16:56:37,274 INFO deco.py Функция arg_parser вызвана из функции main().
+2022-02-06 16:56:37,276 INFO client_echo.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1, порт: 7778, режим работы: listen
+2022-02-06 16:56:37,277 INFO deco.py Функция create_presence вызвана из функции main().
+2022-02-06 16:56:37,780 INFO deco.py Функция process_response_ans вызвана из функции main().
+2022-02-06 16:56:37,780 INFO client_echo.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+2022-02-06 17:01:29,530 INFO deco.py Функция arg_parser вызвана из функции main().
+2022-02-06 17:01:29,534 INFO client_echo.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1, порт: 7778, режим работы: listen
+2022-02-06 17:01:29,534 INFO deco.py Функция create_presence вызвана из функции main().
+2022-02-06 17:01:30,036 INFO deco.py Функция process_response_ans вызвана из функции main().
+2022-02-06 17:01:30,036 INFO client_echo.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+2022-02-07 08:52:20,902 INFO deco.py Функция arg_parser вызвана из функции main().
+2022-02-07 08:52:20,905 INFO client_echo.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1, порт: 7778, режим работы: listen
+2022-02-07 08:52:20,906 INFO deco.py Функция create_presence вызвана из функции main().
+2022-02-07 08:52:21,408 INFO deco.py Функция process_response_ans вызвана из функции main().
+2022-02-07 08:52:21,408 INFO client_echo.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+2022-02-07 08:53:40,114 INFO deco.py Функция arg_parser вызвана из функции main().
+2022-02-07 08:53:40,115 INFO client_echo.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1, порт: 7778, режим работы: listen
+2022-02-07 08:53:40,115 INFO deco.py Функция create_presence вызвана из функции main().
+2022-02-07 08:53:40,616 INFO deco.py Функция process_response_ans вызвана из функции main().
+2022-02-07 08:53:40,617 INFO client_echo.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+2022-02-07 08:53:40,617 INFO deco.py Функция create_message вызвана из функции main().
+2022-02-07 08:53:45,464 INFO deco.py Функция create_message вызвана из функции main().
+2022-02-07 08:53:50,187 INFO deco.py Функция create_message вызвана из функции main().
+2022-02-07 08:53:51,509 INFO deco.py Функция create_message вызвана из функции main().
+2022-02-07 08:53:52,799 INFO deco.py Функция create_message вызвана из функции main().
+2022-02-07 08:53:54,313 INFO client_echo.py Завершение работы по команде пользователя.
+2022-02-07 09:03:01,710 INFO deco.py Функция presence вызвана из функции main().
+2022-02-07 09:03:01,713 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-07 09:03:01,713 INFO deco.py Функция auth вызвана из функции main().
+2022-02-07 09:03:01,714 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-07 09:03:05,134 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-07 09:03:07,106 INFO deco.py Функция process_server_answer вызвана из функции main().
+2022-02-07 09:03:09,270 INFO deco.py Функция quit вызвана из функции main().
+2022-02-07 09:03:09,270 INFO client_class.py quit from server at 1644213789.270654
+2022-02-07 09:03:09,271 INFO deco.py Функция process_server_answer вызвана из функции main().

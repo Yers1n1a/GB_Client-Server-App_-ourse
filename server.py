@@ -120,6 +120,42 @@ def check_client_auth(message):
                 }
 
 
+@log
+def check_client_message(message):
+    '''
+    Обработчик сообщений от клиентов, принимает словарь -
+    сообщение от клинта, проверяет корректность,
+    возвращает словарь-ответ для клиента и отключает его
+    от сервера
+
+    :param message:
+    :return:
+    '''
+    try:
+        check = message[ACTION]
+        check = message[USER]
+    except KeyError:
+        return {
+                RESPONSE: 400,
+                ERROR: f'Bad Request, check required fields'
+            }
+    check_message = ['ACTION', ACTION in message,
+                     'ACTION_TYPE', message[ACTION] == MSG,
+                     'TIME', TIME in message,
+                     'USER', USER in message,
+                     'MESSAGE', MESSAGE in message,
+                     'USER NAME', message[USER][ACCOUNT_NAME] == 'Guest']
+    if all(check_message):
+        return {RESPONSE: 200,
+                ALERT: f'Вы прислали сообщение {message[MESSAGE]}'}
+    else:
+        if check_message.index(False) < 9:
+            return {
+                    RESPONSE: 400,
+                    ERROR: f'Bad Request, check {check_message[check_message.index(False)-1]}'
+            }
+
+
 def main():
     '''
     Загрузка параметров командной строки, если нет параметров, то задаём значения по умоланию.
@@ -176,7 +212,6 @@ def main():
         try:
             message_from_client = get_message(client)
             print(message_from_client)
-            # {'action': 'presence', 'time': 1573760672.167031, 'user': {'account_name': 'Guest'}}
             response = check_client_presence(message_from_client)
             send_message(client, response)
         except (ValueError, json.JSONDecodeError):
@@ -186,25 +221,52 @@ def main():
         try:
             message_from_client = get_message(client)
             print(message_from_client)
-            # {'action': 'presence', 'time': 1573760672.167031, 'user': {'account_name': 'Guest'}}
             response = check_client_auth(message_from_client)
             send_message(client, response)
         except (ValueError, json.JSONDecodeError):
             LOGGER.error('Принято некорретное сообщение о аутентификации.')
             print('Принято некорретное сообщение от клиента.')
             client.close()
-        try:
-            message_from_client = get_message(client)
-            print(message_from_client)
-            # {'action': 'presence', 'time': 1573760672.167031, 'user': {'account_name': 'Guest'}}
-            response = check_client_quit(message_from_client)
-            send_message(client, response)
-            client.close()
-        except (ValueError, json.JSONDecodeError):
-            LOGGER.error('Принято некорретное сообщение о выходе.')
-            print('Принято некорретное сообщение от клиента.')
-            client.close()
 
+        while True:
+            try:
+                message_from_client = get_message(client)
+            except (ValueError, json.JSONDecodeError):
+                LOGGER.error('Принято некорретное сообщение о выходе.')
+                print('Принято некорретное сообщение от клиента.')
+                client.close()
+            if message_from_client[ACTION] == 'quit':
+                response = check_client_quit(message_from_client)
+                print(message_from_client)
+                send_message(client, response)
+                client.close()
+                break
+            else:
+                response = check_client_message(message_from_client)
+                print(message_from_client)
+                send_message(client, response)
+
+        # try:
+        #     message_from_client = get_message(client)
+        #     print(message_from_client)
+        #     response = check_client_message(message_from_client)
+        #     send_message(client, response)
+        #     # client.close()
+        # except (ValueError, json.JSONDecodeError):
+        #     LOGGER.error('Принято некорретное сообщение о выходе.')
+        #     print('Принято некорретное сообщение от клиента.')
+        #     client.close()
+        # try:
+        #     message_from_client = get_message(client)
+        #     print(message_from_client)
+        #     response = check_client_quit(message_from_client)
+        #     send_message(client, response)
+        #
+        # except (ValueError, json.JSONDecodeError):
+        #     LOGGER.error('Принято некорретное сообщение о выходе.')
+        #     print('Принято некорретное сообщение от клиента.')
+        #     client.close()
+        # client.close()
 
 if __name__ == '__main__':
     main()
