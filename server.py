@@ -143,11 +143,11 @@ def check_client_message(message):
                      'ACTION_TYPE', message[ACTION] == MSG,
                      'TIME', TIME in message,
                      'USER', USER in message,
-                     'MESSAGE', MESSAGE in message,
+                     'MESSAGE', MESSAGE_TEXT in message,
                      'USER NAME', message[USER][ACCOUNT_NAME] == 'Guest']
     if all(check_message):
         return {RESPONSE: 200,
-                ALERT: f'Вы прислали сообщение {message[MESSAGE]}'}
+                ALERT: f'Вы прислали сообщение {message[MESSAGE_TEXT]}'}
     else:
         if check_message.index(False) < 9:
             return {
