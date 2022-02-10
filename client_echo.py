@@ -75,6 +75,9 @@ def process_response_ans(message):
             return '200 : OK'
         elif message[RESPONSE] == 400:
             return f'400 : {message[ERROR]}'
+        else:
+            print('999')
+            return f'999 : {message[ERROR]}'
     return RESPONSE
 
 
@@ -86,7 +89,7 @@ def arg_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument('addr', default=DEFAULT_IP_ADDRESS, nargs='?')
     parser.add_argument('port', default=DEFAULT_PORT, type=int, nargs='?')
-    parser.add_argument('-m', '--mode', default='listen', nargs='?')
+    parser.add_argument('-m', '--mode', default='send', nargs='?')
     namespace = parser.parse_args(sys.argv[1:])
     server_address = namespace.addr
     server_port = namespace.port
@@ -123,7 +126,6 @@ def main():
         send_message(transport, create_presence())
         answer = process_response_ans(get_message(transport))
         LOGGER.info(f'Установлено соединение с сервером. Ответ сервера: {answer}')
-        print(f'Установлено соединение с сервером.')
     except json.JSONDecodeError:
         LOGGER.error('Не удалось декодировать полученную Json строку.')
         sys.exit(1)
@@ -136,26 +138,27 @@ def main():
         # Если соединение с сервером установлено корректно,
         # начинаем обмен с ним, согласно требуемому режиму.
         # основной цикл прогрммы:
-        if client_mode == 'send':
-            print('Режим работы - отправка сообщений.')
-        else:
-            print('Режим работы - приём сообщений.')
+        # if client_mode == 'send':
+        #     print('Режим работы - отправка сообщений.')
+        # else:
+        #     print('Режим работы - приём сообщений.')
         while True:
             # режим работы - отправка сообщений
             if client_mode == 'send':
                 try:
                     send_message(transport, create_message(transport))
-                except (ConnectionResetError, ConnectionError, ConnectionAbortedError):
-                    LOGGER.error(f'Соединение с сервером {server_address} было потеряно.')
-                    sys.exit(1)
-
-            # Режим работы приём:
-            if client_mode == 'listen':
-                try:
                     message_from_server(get_message(transport))
                 except (ConnectionResetError, ConnectionError, ConnectionAbortedError):
                     LOGGER.error(f'Соединение с сервером {server_address} было потеряно.')
                     sys.exit(1)
+
+            # # Режим работы приём:
+            # if client_mode == 'listen':
+            #     try:
+            #         message_from_server(get_message(transport))
+            #     except (ConnectionResetError, ConnectionError, ConnectionAbortedError):
+            #         LOGGER.error(f'Соединение с сервером {server_address} было потеряно.')
+            #         sys.exit(1)
 
 
 if __name__ == '__main__':

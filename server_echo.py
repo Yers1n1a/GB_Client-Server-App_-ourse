@@ -15,47 +15,42 @@ import select
 LOGGER = logging.getLogger('server')
 
 
-def process_client_message(message):
+def process_client_message(message, message_queue, client):
     try:
         check = message[ACTION]
-        check = message[USER]
+        check = message[TIME]
     except KeyError:
-        return {
-                RESPONSE: 400,
-                ERROR: f'Bad Request, check required fields'
-            }
-    if TIME in message:
-        if message[ACTION] == PRESENCE:
-            if message[USER][ACCOUNT_NAME] == 'Guest':
-                return {RESPONSE: 200,
-                        ALERT: 'Вы успешно подключились к серверу'}
-            else:
-                return {RESPONSE: 402,
-                        ERROR: 'This could be wrong password or no account with that name'}
-        elif message[ACTION] == QUIT:
-            return {RESPONSE: 200,
-                    ALERT: 'Вы успешно отключены от сервера'}
-        elif message[ACTION] == AUTHENTICATE:
-            check_auth = ['USER NAME', message[USER][ACCOUNT_NAME] == 'Guest',
-                          'PASSWORD', message[USER][PASSWORD] == 'password']
-            if all(check_auth):
-                return {RESPONSE: 200,
-                        ALERT: 'Вы успешно авторизовались'}
-            else:
-                return {
-                    RESPONSE: 402,
-                    ERROR: f'This could be wrong password or no account with that name'
-                }
-        elif message[ACTION] == MSG:
-            check_message_text = ['MESSAGE', MESSAGE_TEXT in message]
-            if all(check_message_text):
-                return {RESPONSE: 200,
-                        ALERT: f'Вы прислали сообщение {message[MESSAGE_TEXT]}'}
-    else:
-        return {
-            RESPONSE: 400,
-            ERROR: f'Bad Request, check Time'
-        }
+        send_message(client, {RESPONSE: 400,
+                              ERROR: f'Bad Request, check required fields'})
+        return
+    if message[ACTION] == PRESENCE:
+        if message[USER][ACCOUNT_NAME] == 'Guest':
+            send_message(client, {RESPONSE: 200,
+                                  ALERT: 'Вы успешно подключились к серверу'})
+            return
+        else:
+            return {RESPONSE: 402,
+                    ERROR: 'This could be wrong password or no account with that name'}
+    elif message[ACTION] == QUIT:
+        send_message(client, {RESPONSE: 200,
+                              ALERT: 'Вы успешно отключены от сервера'})
+        return
+    elif message[ACTION] == AUTHENTICATE:
+        check_auth = ['USER NAME', message[USER][ACCOUNT_NAME] == 'Guest',
+                      'PASSWORD', message[USER][PASSWORD] == 'password']
+        if all(check_auth):
+            send_message(client, {RESPONSE: 200,
+                                  ALERT: 'Вы успешно авторизовались'})
+            return
+        else:
+            send_message(client, {RESPONSE: 402,
+                                  ERROR: f'This could be wrong password or no account with that name'})
+            return
+    elif message[ACTION] == MSG:
+        check_message_text = ['MESSAGE', MESSAGE_TEXT in message]
+        if all(check_message_text):
+            message_queue.append((message[ACCOUNT_NAME], message[MESSAGE_TEXT]))
+            return
 
 @log
 def arg_parser():
@@ -90,7 +85,7 @@ def main():
     listen_address, listen_port = arg_parser()
     transport = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     transport.bind((listen_address, listen_port))
-    transport.settimeout(0.5)
+    transport.settimeout(0.1)
 
     # Слушаем порт
     transport.listen(MAX_CONNECTIONS)
@@ -143,20 +138,6 @@ def main():
                 except:
                     LOGGER.info(f'Клиент {waiting_client.getpeername()} отключился от сервера.')
                     clients.remove(waiting_client)
-
-
-        # message_from_client = get_message(client)
-        # # print(message_from_client)
-        # response = process_client_message(message_from_client)
-        # # print(response)
-        # send_message(client, response)
-        # # print(message_from_client[ACTION])
-        # if response['response'] != 200:
-        #     client.close()
-        #     client, client_address = transport.accept()
-        # if message_from_client[ACTION] == 'quit':
-        #     client.close()
-        #     client, client_address = transport.accept()
 
 
 if __name__ == '__main__':

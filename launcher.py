@@ -11,14 +11,15 @@ while True:
     if ACTION == 'q':
         break
     elif ACTION == 's':
-        PROCESS.append(subprocess.Popen('python server_echo_2.py',
-                                        shell=True))
-        for i in range(2):
-            PROCESS.append(subprocess.Popen('python client_echo.py -m send',
-                                            shell=True))
-        for i in range(5):
-            PROCESS.append(subprocess.Popen('python client_echo.py -m listen',
-                                            shell=True))
+        PROCESS.append(subprocess.Popen('python server_echo_2.py', shell=True))
+        PROCESS.append(subprocess.Popen('python client_echo.py -m send', shell=True))
+        PROCESS.append(subprocess.Popen('python client_echo.py -m listen', shell=True))
+        # for i in range(1):
+        #     PROCESS.append(subprocess.Popen('python client_echo.py -m send',
+        #                                     shell=True))
+        # for i in range(2):
+        #     PROCESS.append(subprocess.Popen('python client_echo.py -m listen',
+        #                                     shell=True))
     elif ACTION == 'x':
         while PROCESS:
             VICTIM = PROCESS.pop()
